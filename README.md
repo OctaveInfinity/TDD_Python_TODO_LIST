@@ -1,5 +1,7 @@
 # TDD_Python_TODO_LIST
-This is a simple ToDoList with TDD metologic (Selenium, Unittest, ...). 
+This is a simple ToDoList with TDD metologic (Python, Django, Selenium, Webdriver, Unittest, Mock, Java-Script, QUnit, Fabric ...). 
+
+http://live.octave-infinity.com/
 
 Provisioning a new site
 =======================
@@ -32,14 +34,15 @@ eg, on Ubuntu:
 Assume we have a user account at /home/username
 
 /home/username
-└── sites
-    ├── DOMAIN1
-    │   ├── .env
-    │   ├── db.sqlite3
-    │   ├── manage.py etc
-    │   ├── static
-    │   └── virtualenv
-    └── DOMAIN2
-        ├── .env
-        ├── db.sqlite3
-        ├── etc
+    sites
+        DOMAIN1
+            .env
+            db.sqlite3
+            manage.py
+            static
+            virtualenv
+            ...
+        DOMAIN2
+            .env
+            db.sqlite3
+            ...
