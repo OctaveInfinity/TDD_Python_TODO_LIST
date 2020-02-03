@@ -6,6 +6,8 @@ Restart=on-failure
 
 User=emako
 
+Environment=EMAIL_PASSWORD=JustATest
+
 WorkingDirectory=/home/emako/sites/SITENAME/source
 
 ExecStart=/home/emako/sites/SITENAME/virtualenv/bin/gunicorn \
