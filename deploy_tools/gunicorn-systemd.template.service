@@ -4,10 +4,18 @@ Description=Gunicorn server for SITENAME
 [Service]
 Restart=on-failure
 User=emako
+
+Environment=EMAIL_PASSWORD=JustATest
+Environment=YAHOO_PASSWORD=JustATest
+
 WorkingDirectory=/home/emako/sites/SITENAME/source
+
 ExecStart=/home/emako/sites/SITENAME/virtualenv/bin/gunicorn \
-    --bind unix:/tmp/SITENAME.socket \
-    superlists.wsgi:application
+--bind unix:/tmp/SITENAME.socket \
+--capture-output \
+--access-logfile ../access.log \
+--error-logfile ../error.log \
+superlists.wsgi:application
 
 [Install]
 WantedBy=multi-user.target
