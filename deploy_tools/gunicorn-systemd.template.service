@@ -7,12 +7,13 @@ Restart=on-failure
 User=emako
 
 WorkingDirectory=/home/emako/sites/SITENAME/source
+
 ExecStart=/home/emako/sites/SITENAME/virtualenv/bin/gunicorn \
-    --capture-output \
-    --access-logfile ../access.log \
-    --error-logfile ../error.log \
-    --bind unix:/tmp/SITENAME.socket \
-    superlists.wsgi:application
+--bind unix:/tmp/SITENAME.socket \
+--capture-output \
+--access-logfile ../access.log \
+--error-logfile ../error.log \
+superlists.wsgi:application
 
 [Install]
 WantedBy=multi-user.target
